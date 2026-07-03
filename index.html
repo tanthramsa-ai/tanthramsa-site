@@ -3,25 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>LendersHub by Tanthramsa — The operating system for lending businesses</title>
-<meta name="description" content="LendersHub is a cloud platform that lets lending businesses run customers, loans, collections, and field agents from one branded system — no custom software required.">
+<title>Tanthramsa | LendersHub — The operating system for lending businesses</title>
+<meta name="description" content="Tanthramsa's LendersHub is a cloud platform that lets lending businesses run customers, loans, collections, and field agents from one branded system — no custom software required.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-grid{ display:grid; grid-template-columns:1fr 1.3fr; gap:56px; }
+  .contact-info .eyebrow{ margin-bottom:16px; }
+  .contact-info h2{ font-size:28px; margin-bottom:14px; }
+  .contact-info p{ color:var(--ink-soft); margin-bottom:24px; }
+  .contact-detail{ padding:16px 0; border-top:1px solid var(--rule); }
+  .contact-detail h5{ font-family:var(--font-mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px; }
+  .contact-detail p{ margin:0; color:var(--ink); font-size:15px; }
+  .form-card{ background:var(--paper-2); border:1px solid var(--rule); border-radius:18px; padding:32px; }
+  #formStatus{ margin-top:16px; font-size:14.5px; }
+  #formStatus.success{ color:var(--vault-deep); }
+  #formStatus.error{ color:var(--amber); }
+  @media (max-width:920px){ .contact-grid{ grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
 <nav class="site-nav">
   <div class="wrap">
-    <a href="index.html" class="logo"><span class="mark"></span>LendersHub</a>
+    <a href="#home" class="logo"><span class="mark"></span>Tanthramsa<span class="product-tag">LendersHub</span></a>
     <div class="nav-links">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="features.html">Features</a>
-      <a href="pricing.html">Pricing</a>
-      <a href="contact.html">Contact</a>
+      <a href="#home" aria-current="page">Home</a>
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
     </div>
     <div class="nav-cta">
-      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+      <a href="#contact" class="btn btn-primary">Book a demo</a>
     </div>
     <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
@@ -31,15 +45,15 @@
   <div class="ticker-track" id="tickerTrack"></div>
 </div>
 
-<header class="hero">
+<header class="hero" id="home">
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Lending operations platform</div>
       <h1>Every loan.<br>Every rupee.<br><em>One ledger.</em></h1>
       <p class="lede">LendersHub lets lending businesses run their entire operation — customers, loans, collections, and field agents — from one branded system, without building software of their own.</p>
       <div class="hero-actions">
-        <a href="contact.html" class="btn btn-primary">Book a demo</a>
-        <a href="features.html" class="btn btn-ghost">See what's inside</a>
+        <a href="#contact" class="btn btn-primary">Book a demo</a>
+        <a href="#features" class="btn btn-ghost">See what's inside</a>
       </div>
     </div>
     <div class="hero-panel">
@@ -194,15 +208,254 @@
   </div>
 </section>
 
-<section>
+<header class="page-hero" id="features">
   <div class="wrap">
-    <div class="cta-banner">
+    <div class="eyebrow">Everything inside LendersHub</div>
+    <h2>One platform, the whole lending lifecycle.</h2>
+    <p>From onboarding a customer to closing a loan, every step runs through the same ledger — so the office, the field, and leadership are always looking at the same numbers.</p>
+  </div>
+</header>
+
+<section style="padding-top:20px;">
+  <div class="wrap">
+
+    <div class="feature-row">
       <div>
-        <h2>See LendersHub running on a real portfolio.</h2>
-        <p>Book a walkthrough with our team — we'll show the office console and the field app side by side.</p>
+        <div class="idx">01 / Loan management</div>
+        <h3>Any loan product, no development required</h3>
       </div>
-      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+      <div>
+        <p>Configure weekly, daily, monthly, or term loan products directly in the platform — interest structure, tenure, fees, and repayment schedule are all set up, not coded. Launch a new product for a branch in the time it takes to fill in a form.</p>
+        <div class="feature-tags"><span>Product builder</span><span>Flexible schedules</span><span>Multi-branch rollout</span></div>
+      </div>
     </div>
+
+    <div class="feature-row">
+      <div>
+        <div class="idx">02 / Collections &amp; field agents</div>
+        <h3>Built for the last mile, not just the back office</h3>
+      </div>
+      <div>
+        <p>Field agents open the app to a daily list and an overdue list, capture payments with photo receipts, and keep working when there's no signal — everything syncs the moment connectivity returns. Nothing collected in the field goes unrecorded.</p>
+        <div class="feature-tags"><span>Offline mode</span><span>Photo receipts</span><span>Route lists</span><span>Auto-sync</span></div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div>
+        <div class="idx">03 / Roles &amp; security</div>
+        <h3>Accountability from Owner to Viewer</h3>
+      </div>
+      <div>
+        <p>Every user gets a role — Owner, Admin, Branch Manager, Agent, Viewer — that defines exactly what they can see and touch. OTP-secured logins and a full transaction ledger mean every action is traceable back to a person.</p>
+        <div class="feature-tags"><span>Role-based access</span><span>OTP login</span><span>Audit trail</span></div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div>
+        <div class="idx">04 / Reporting &amp; real-time visibility</div>
+        <h3>The portfolio, as it happens</h3>
+      </div>
+      <div>
+        <p>Leadership sees active loans, collections, and portfolio health update in real time instead of waiting for a month-end report. Drill from a branch-level summary down to a single transaction without leaving the dashboard.</p>
+        <div class="feature-tags"><span>Live dashboards</span><span>Branch drill-down</span><span>Exportable reports</span></div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div>
+        <div class="idx">05 / Multi-tenant administration</div>
+        <h3>Run every client from one console</h3>
+      </div>
+      <div>
+        <p>Each lender operates in a fully isolated, branded environment. As the platform owner, you manage every client, subscription tier, and invoice centrally — onboarding a new lender takes minutes, not a project.</p>
+        <div class="feature-tags"><span>Isolated tenants</span><span>White-label branding</span><span>Central billing</span></div>
+      </div>
+    </div>
+
+    <div class="feature-row">
+      <div>
+        <div class="idx">06 / Web &amp; mobile</div>
+        <h3>The right interface for the right job</h3>
+      </div>
+      <div>
+        <p>Office staff and leadership work from a web portal built around approvals, configuration, and oversight. Agents in the field carry a purpose-built mobile app. Both read from and write to the same ledger.</p>
+        <div class="feature-tags"><span>Web portal</span><span>Mobile app</span><span>Shared data model</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<header class="page-hero" id="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Subscription tiers</div>
+    <h2>Priced to grow with your book.</h2>
+    <p>Every tier includes the full ledger, OTP-secured logins, and the mobile app for field agents. Higher tiers add branches, users, and administrative controls.</p>
+    <p class="note">Figures below are illustrative starting points — final pricing is confirmed during onboarding based on branch count and loan volume.</p>
+  </div>
+</header>
+
+<section style="padding-top:20px;">
+  <div class="wrap">
+    <div class="billing-toggle" role="group" aria-label="Billing period">
+      <button type="button" class="toggle-btn" data-period="monthly">Monthly</button>
+      <button type="button" class="toggle-btn active" data-period="yearly">Yearly</button>
+    </div>
+
+    <div class="tier-grid">
+
+      <div class="tier">
+        <div class="tier-name">Starter</div>
+        <div class="tier-price" data-monthly-amount="₹999" data-monthly-unit="/month" data-yearly-amount="₹9,999" data-yearly-unit="/year"><span class="price-amount">₹9,999</span><span class="price-unit">/year</span></div>
+        <p class="tier-desc">For a single-branch lender getting off spreadsheets.</p>
+        <a href="#contact" class="btn btn-ghost btn-block">Talk to sales</a>
+        <ul class="checklist">
+          <li>1 branch, up to 10 users</li>
+          <li>Core loan products (weekly, monthly)</li>
+          <li>Mobile app for field agents</li>
+          <li>Standard reporting</li>
+        </ul>
+      </div>
+
+      <div class="tier featured">
+        <div class="tier-name">Growth</div>
+        <div class="tier-price" data-monthly-amount="₹1,999" data-monthly-unit="/month" data-yearly-amount="₹19,999" data-yearly-unit="/year"><span class="price-amount">₹19,999</span><span class="price-unit">/year</span></div>
+        <p class="tier-desc">For multi-branch lenders that need real-time oversight.</p>
+        <a href="#contact" class="btn btn-primary btn-block">Talk to sales</a>
+        <ul class="checklist">
+          <li>Up to 10 branches, unlimited users</li>
+          <li>All loan product types</li>
+          <li>Offline collections with photo receipts</li>
+          <li>Real-time portfolio dashboards</li>
+          <li>Role-based access, Owner to Viewer</li>
+        </ul>
+      </div>
+
+      <div class="tier">
+        <div class="tier-name">Enterprise</div>
+        <div class="tier-price" data-monthly-amount="Custom" data-monthly-unit="" data-yearly-amount="Custom" data-yearly-unit=""><span class="price-amount">Custom</span><span class="price-unit"></span></div>
+        <p class="tier-desc">For platform owners running many client lenders.</p>
+        <a href="#contact" class="btn btn-ghost btn-block">Talk to sales</a>
+        <ul class="checklist">
+          <li>Unlimited branches and tenants</li>
+          <li>Central client &amp; billing console</li>
+          <li>White-label branding per tenant</li>
+          <li>Dedicated onboarding &amp; support</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Compare</div>
+      <h2>What's included at each tier.</h2>
+    </div>
+    <table class="ledger-table">
+      <thead>
+        <tr>
+          <th>Capability</th>
+          <th class="num">Starter</th>
+          <th class="num">Growth</th>
+          <th class="num">Enterprise</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Branches included</td><td class="num">1</td><td class="num">Up to 10</td><td class="num">Unlimited</td></tr>
+        <tr><td>Loan products</td><td class="num">Weekly, monthly</td><td class="num">All types</td><td class="num">All types</td></tr>
+        <tr><td>Offline collections</td><td class="num">—</td><td class="num">Included</td><td class="num">Included</td></tr>
+        <tr><td>Real-time dashboards</td><td class="num">—</td><td class="num">Included</td><td class="num">Included</td></tr>
+        <tr><td>Role-based access</td><td class="num">Basic</td><td class="num">Full</td><td class="num">Full</td></tr>
+        <tr><td>Multi-tenant console</td><td class="num">—</td><td class="num">—</td><td class="num">Included</td></tr>
+        <tr><td>White-label branding</td><td class="num">—</td><td class="num">Add-on</td><td class="num">Included</td></tr>
+        <tr><td>Support</td><td class="num">Email</td><td class="num">Priority</td><td class="num">Dedicated</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<header class="page-hero" id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h2>Let's look at your book together.</h2>
+    <p>Tell us a bit about your lending business and we'll set up a walkthrough of LendersHub — office console and field app both.</p>
+  </div>
+</header>
+
+<section style="padding-top:20px;">
+  <div class="wrap contact-grid">
+
+    <div class="contact-info">
+      <div class="eyebrow">Why reach out</div>
+      <h2>What happens after you submit this form</h2>
+      <p>A member of our team will reply within one business day to schedule a 30-minute walkthrough tailored to your branch count and loan products.</p>
+
+      <div class="contact-detail">
+        <h5>Sales &amp; demos</h5>
+        <p>tanthramsa@gmail.com</p>
+      </div>
+      <div class="contact-detail">
+        <h5>Support</h5>
+        <p>tanthramsa@gmail.com</p>
+      </div>
+      <div class="contact-detail">
+        <h5>Office</h5>
+        <p>Coimbatore, Tamil Nadu, India</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="leadForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="company">Company / lending business</label>
+            <input id="company" name="company" type="text" required autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="branches">Number of branches</label>
+            <select id="branches" name="branches">
+              <option>1</option>
+              <option>2–5</option>
+              <option>6–10</option>
+              <option>10+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="interest">Most interested in</label>
+            <select id="interest" name="interest">
+              <option>Loan management</option>
+              <option>Collections &amp; field agents</option>
+              <option>Multi-tenant / platform ownership</option>
+              <option>Reporting &amp; audit</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your current process and where it's breaking down."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Request a demo</button>
+        <p id="formStatus" role="status"></p>
+      </form>
+    </div>
+
   </div>
 </section>
 
@@ -210,29 +463,30 @@
   <div class="wrap">
     <div class="footer-grid">
       <div>
-        <a href="index.html" class="logo"><span class="mark"></span>LendersHub</a>
+        <a href="#home" class="logo"><span class="mark"></span>Tanthramsa<span class="product-tag">LendersHub</span></a>
+        <p class="footer-by">Makers of LendersHub</p>
         <p style="margin-top:14px; color:var(--ink-soft); font-size:14px; max-width:32ch;">The operating system for lending businesses — customers, loans, collections, and field agents in one branded platform.</p>
       </div>
       <div>
         <h5>Product</h5>
         <ul>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="pricing.html">Pricing</a></li>
-          <li><a href="contact.html">Book a demo</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Book a demo</a></li>
         </ul>
       </div>
       <div>
         <h5>Company</h5>
         <ul>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="contact.html">Support</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Support</a></li>
         </ul>
       </div>
       <div>
         <h5>Platform</h5>
         <ul>
           <li><a href="https://app.yourdomain.com">Sign in</a></li>
-          <li><a href="contact.html">Request access</a></li>
+          <li><a href="#contact">Request access</a></li>
         </ul>
       </div>
     </div>
@@ -244,5 +498,46 @@
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+  // Lead form submission.
+  // Wired to Formspree by default — replace YOUR_FORM_ID with your own
+  // (create a free form at https://formspree.io) to receive submissions by email.
+  // See README.md for alternatives (Vercel serverless function, etc).
+  const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = "Sending...";
+    status.className = "";
+
+    if (FORM_ENDPOINT.includes("YOUR_FORM_ID")) {
+      status.textContent = "Form isn't connected yet — see README.md to add your Formspree ID.";
+      status.className = "error";
+      return;
+    }
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Thanks — we'll be in touch within one business day.";
+        status.className = "success";
+      } else {
+        status.textContent = "Something went wrong. Please email tanthramsa@gmail.com directly.";
+        status.className = "error";
+      }
+    } catch (err) {
+      status.textContent = "Something went wrong. Please email tanthramsa@gmail.com directly.";
+      status.className = "error";
+    }
+  });
+</script>
 </body>
 </html>
