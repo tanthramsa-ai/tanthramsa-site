@@ -104,6 +104,18 @@ button{ font-family:inherit; cursor:pointer; }
   border-radius:4px;
   transform:rotate(45deg);
 }
+.product-tag{
+  font-family:var(--font-mono);
+  font-size:11px;
+  font-weight:500;
+  letter-spacing:.04em;
+  color:var(--vault-deep);
+  background:var(--vault-100);
+  padding:3px 9px;
+  border-radius:999px;
+  margin-left:2px;
+}
+@media (max-width:480px){ .product-tag{ display:none; } }
 .nav-links{
   display:flex;
   align-items:center;
@@ -150,6 +162,7 @@ button{ font-family:inherit; cursor:pointer; }
 .hero{
   padding:88px 0 56px;
   border-bottom:1px solid var(--rule-dark);
+  scroll-margin-top:76px;
 }
 .hero-grid{
   display:grid;
@@ -433,9 +446,22 @@ section{ padding:84px 0; }
 .tier.featured .checklist li::before{ color:#9C9BF0; }
 .tier-name{ font-family:var(--font-mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--vault); }
 .tier.featured .tier-name{ color:#9C9BF0; }
-.tier-price{ font-family:var(--font-display); font-weight:800; font-size:36px; }
-.tier-price span{ font-family:var(--font-body); font-size:14px; color:var(--ink-soft); font-weight:400; }
-.tier.featured .tier-price span{ color:#A9ADC4; }
+.tier-price{
+  display:flex;
+  align-items:baseline;
+  gap:6px;
+  font-family:var(--font-mono);
+  font-variant-numeric:tabular-nums;
+}
+.tier-price .price-amount{
+  font-size:46px;
+  font-weight:700;
+  letter-spacing:-0.02em;
+  color:var(--vault-deep);
+}
+.tier.featured .price-amount{ color:var(--paper); }
+.tier-price .price-unit{ font-family:var(--font-body); font-size:15px; color:var(--ink-soft); font-weight:500; }
+.tier.featured .price-unit{ color:#A9ADC4; }
 .tier-desc{ font-size:14.5px; color:var(--ink-soft); }
 .tier.featured .tier-desc{ color:#C7C9E0; }
 
@@ -486,6 +512,14 @@ footer{
   gap:32px;
   margin-bottom:36px;
 }
+.footer-by{
+  font-family:var(--font-mono);
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--ink-soft);
+  margin-top:6px;
+}
 .footer-grid h5{
   font-family:var(--font-mono);
   font-size:12px;
@@ -503,9 +537,9 @@ footer{
   font-size:13px; color:var(--ink-soft);
 }
 
-/* Page hero (interior pages) */
-.page-hero{ padding:64px 0 48px; border-bottom:1px solid var(--rule-dark); }
-.page-hero h1{ font-size:clamp(32px,4vw,48px); margin-top:16px; }
+/* Page hero (section intros within the one-page layout) */
+.page-hero{ padding:64px 0 48px; border-bottom:1px solid var(--rule-dark); scroll-margin-top:76px; }
+.page-hero h1, .page-hero h2{ font-size:clamp(32px,4vw,48px); margin-top:16px; }
 .page-hero p{ font-size:17px; color:var(--ink-soft); max-width:60ch; margin-top:16px; }
 
 /* Feature detail rows */

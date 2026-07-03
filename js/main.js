@@ -49,3 +49,34 @@ if (hamburger && navLinks) {
     navLinks.style.cssText += open ? '' : 'position:absolute; top:76px; left:0; right:0; background:var(--paper); flex-direction:column; padding:20px 28px; border-bottom:1px solid var(--rule-dark);';
   });
 }
+
+// One-page nav: highlight the link for the section currently in view,
+// and close the mobile menu after tapping an anchor link.
+const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+const sections = Array.from(navAnchors)
+  .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+  .filter(Boolean);
+if (navAnchors.length && sections.length) {
+  navAnchors.forEach(a => a.addEventListener('click', () => {
+    if (navLinks && window.getComputedStyle(hamburger).display !== 'none') {
+      navLinks.style.display = 'none';
+    }
+  }));
+
+  const setActive = (id) => {
+    navAnchors.forEach(a => {
+      if (a.getAttribute('href') === `#${id}`) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    });
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    const visible = entries.filter(e => e.isIntersecting);
+    if (visible.length) {
+      const top = visible.reduce((a, b) => (a.intersectionRatio > b.intersectionRatio ? a : b));
+      setActive(top.target.id);
+    }
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] });
+
+  sections.forEach(section => observer.observe(section));
+}
