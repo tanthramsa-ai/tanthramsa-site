@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — LendersHub by Tanthramsa</title>
+<meta name="description" content="Book a demo of LendersHub or get in touch with our team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+  .contact-grid{ display:grid; grid-template-columns:1fr 1.3fr; gap:56px; }
+  .contact-info .eyebrow{ margin-bottom:16px; }
+  .contact-info h2{ font-size:28px; margin-bottom:14px; }
+  .contact-info p{ color:var(--ink-soft); margin-bottom:24px; }
+  .contact-detail{ padding:16px 0; border-top:1px solid var(--rule); }
+  .contact-detail h5{ font-family:var(--font-mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); margin-bottom:6px; }
+  .contact-detail p{ margin:0; color:var(--ink); font-size:15px; }
+  .form-card{ background:var(--paper-2); border:1px solid var(--rule); border-radius:18px; padding:32px; }
+  #formStatus{ margin-top:16px; font-size:14.5px; }
+  #formStatus.success{ color:var(--vault-deep); }
+  #formStatus.error{ color:var(--amber); }
+  @media (max-width:920px){ .contact-grid{ grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a href="index.html" class="logo"><span class="mark"></span>LendersHub</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a href="contact.html" class="btn btn-primary">Book a demo</a>
+    </div>
+    <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Get in touch</div>
+    <h1>Let's look at your book together.</h1>
+    <p>Tell us a bit about your lending business and we'll set up a walkthrough of LendersHub — office console and field app both.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap contact-grid">
+
+    <div class="contact-info">
+      <div class="eyebrow">Why reach out</div>
+      <h2>What happens after you submit this form</h2>
+      <p>A member of our team will reply within one business day to schedule a 30-minute walkthrough tailored to your branch count and loan products.</p>
+
+      <div class="contact-detail">
+        <h5>Sales &amp; demos</h5>
+        <p>tanthramsa@gmail.com</p>
+      </div>
+      <div class="contact-detail">
+        <h5>Support</h5>
+        <p>tanthramsa@gmail.com</p>
+      </div>
+      <div class="contact-detail">
+        <h5>Office</h5>
+        <p>Coimbatore, Tamil Nadu, India</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <form id="leadForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required autocomplete="name">
+          </div>
+          <div class="field">
+            <label for="company">Company / lending business</label>
+            <input id="company" name="company" type="text" required autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">Work email</label>
+            <input id="email" name="email" type="email" required autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="branches">Number of branches</label>
+            <select id="branches" name="branches">
+              <option>1</option>
+              <option>2–5</option>
+              <option>6–10</option>
+              <option>10+</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="interest">Most interested in</label>
+            <select id="interest" name="interest">
+              <option>Loan management</option>
+              <option>Collections &amp; field agents</option>
+              <option>Multi-tenant / platform ownership</option>
+              <option>Reporting &amp; audit</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Anything else we should know?</label>
+            <textarea id="message" name="message" placeholder="Tell us about your current process and where it's breaking down."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Request a demo</button>
+        <p id="formStatus" role="status"></p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><span class="mark"></span>LendersHub</a>
+        <p style="margin-top:14px; color:var(--ink-soft); font-size:14px; max-width:32ch;">The operating system for lending businesses — customers, loans, collections, and field agents in one branded platform.</p>
+      </div>
+      <div>
+        <h5>Product</h5>
+        <ul>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Book a demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Company</h5>
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Platform</h5>
+        <ul>
+          <li><a href="https://app.yourdomain.com">Sign in</a></li>
+          <li><a href="contact.html">Request access</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Tanthramsa. All rights reserved.</span>
+      <span>Built on a single ledger, everywhere.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Lead form submission.
+  // Wired to Formspree by default — replace YOUR_FORM_ID with your own
+  // (create a free form at https://formspree.io) to receive submissions by email.
+  // See README.md for alternatives (Vercel serverless function, etc).
+  const FORM_ENDPOINT = "https://formspree.io/f/YOUR_FORM_ID";
+
+  const form = document.getElementById('leadForm');
+  const status = document.getElementById('formStatus');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    status.textContent = "Sending...";
+    status.className = "";
+
+    if (FORM_ENDPOINT.includes("YOUR_FORM_ID")) {
+      status.textContent = "Form isn't connected yet — see README.md to add your Formspree ID.";
+      status.className = "error";
+      return;
+    }
+
+    try {
+      const res = await fetch(FORM_ENDPOINT, {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        form.reset();
+        status.textContent = "Thanks — we'll be in touch within one business day.";
+        status.className = "success";
+      } else {
+        status.textContent = "Something went wrong. Please email tanthramsa@gmail.com directly.";
+        status.className = "error";
+      }
+    } catch (err) {
+      status.textContent = "Something went wrong. Please email tanthramsa@gmail.com directly.";
+      status.className = "error";
+    }
+  });
+</script>
+</body>
+</html>
