@@ -161,7 +161,7 @@ button{ font-family:inherit; cursor:pointer; }
 
 /* ---------- Hero ---------- */
 .hero{
-  padding:40px 0 56px;
+  padding:20px 0 40px;
   border-bottom:1px solid var(--rule-dark);
   scroll-margin-top:76px;
 }
@@ -272,7 +272,7 @@ button{ font-family:inherit; cursor:pointer; }
 }
 
 /* ---------- Sections ---------- */
-section{ padding:60px 0; }
+section{ padding:40px 0; }
 .section-head{ max-width:640px; margin-bottom:48px; }
 .section-head h2{ font-size:clamp(28px,3vw,38px); margin-top:14px; }
 .section-head p{ color:var(--ink-soft); margin-top:14px; font-size:16.5px; }
@@ -539,7 +539,7 @@ footer{
 }
 
 /* Page hero (section intros within the one-page layout) */
-.page-hero{ padding:40px 0 48px; border-bottom:1px solid var(--rule-dark); scroll-margin-top:76px; }
+.page-hero{ padding:20px 0 32px; border-bottom:1px solid var(--rule-dark); scroll-margin-top:76px; }
 .page-hero h1, .page-hero h2{ font-size:clamp(32px,4vw,48px); margin-top:16px; }
 .page-hero p{ font-size:17px; color:var(--ink-soft); max-width:60ch; margin-top:16px; }
 
