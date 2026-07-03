@@ -104,18 +104,19 @@ button{ font-family:inherit; cursor:pointer; }
   border-radius:4px;
   transform:rotate(45deg);
 }
-.product-tag{
+.by-tag{
   font-family:var(--font-mono);
-  font-size:11px;
-  font-weight:500;
-  letter-spacing:.04em;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
   color:var(--vault-deep);
   background:var(--vault-100);
-  padding:3px 9px;
+  padding:4px 10px;
   border-radius:999px;
-  margin-left:2px;
+  margin-left:8px;
 }
-@media (max-width:480px){ .product-tag{ display:none; } }
+@media (max-width:480px){ .by-tag{ display:none; } }
 .nav-links{
   display:flex;
   align-items:center;
